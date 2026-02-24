@@ -1,0 +1,206 @@
+/* What We Offer - white background, blue #08B3E5 only where used */
+
+:root {
+  --offer-blue: #08B3E5;
+}
+
+/* Page: white background */
+body {
+  background: #fff;
+}
+
+/* Active nav link: highlight so it doesn’t disappear on light nav */
+.nav-links a.active {
+  color: var(--white);
+  font-weight: 600;
+  background: var(--offer-blue);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* Hero background: solid #08B3E5, no image */
+.offer-page-hero .hero-bg {
+  background-color: var(--offer-blue);
+  background-image: none;
+}
+
+.offer-page-hero {
+  min-height: auto;
+}
+
+.offer-inner {
+  align-items: center;
+}
+
+/* TEXT COLOR: main \"What We Offer?\" heading */
+.offer-content h1 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+/* TEXT COLOR: paragraph under heading */
+.offer-content .hero-desc {
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 520px;
+  margin-bottom: 1rem;
+}
+
+/* TEXT COLOR: "Products we offer" label — white bg, blue text */
+.products-label {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid rgba(8, 179, 229, 0.5);
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* Inner content box - no card, clear box */
+.inner-box {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  max-width: 520px;
+  border: 1px solid rgba(8, 179, 229, 0.3);
+}
+
+/* TEXT COLOR: \"Loans\" and \"Deposit\" titles inside white box */
+.box-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.5rem;
+}
+
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.two-cols ul {
+  list-style: none;
+}
+
+/* TEXT COLOR: loan list items + bullet dots */
+.two-cols ul li {
+  font-size: 0.92rem;
+  color: rgba(19, 41, 61, 0.95);
+  padding: 0.2rem 0;
+}
+
+.two-cols ul li::before {
+  content: "• ";
+  color: var(--blue-dark);
+}
+
+.divider {
+  height: 1px;
+  background: var(--blue-pale);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.deposit-list {
+  list-style: none;
+}
+
+/* TEXT COLOR: deposit list items + bullet dots */
+.deposit-list li {
+  font-size: 0.92rem;
+  color: rgba(19, 41, 61, 0.95);
+  padding: 0.2rem 0;
+}
+
+.deposit-list li::before {
+  content: "• ";
+  color: var(--blue-dark);
+}
+
+.offer-vector-img {
+  max-height: 380px;
+}
+
+/* Bottom section: white background, blocks on cards */
+.offer-bottom {
+  background: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.offer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* TEXT COLOR: bottom cards (Members / Services / CTA) */
+.offer-block {
+  color: var(--white);
+  background: var(--offer-blue);
+  border: none;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.offer-block h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.offer-block ul {
+  list-style: none;
+}
+
+.offer-block ul li {
+  font-size: 0.85rem;
+  color: var(--white);
+  padding: 0.2rem 0;
+}
+
+.offer-block ul li::before {
+  content: "• ";
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.offer-block.offer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--blue-dark);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  min-height: 100px;
+}
+
+.offer-block.offer-cta p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .offer-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-illustration {
+    order: -1;
+  }
+  .offer-bottom-inner {
+    grid-template-columns: 1fr;
+  }
+}
