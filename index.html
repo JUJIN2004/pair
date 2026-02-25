@@ -1,6 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rural Bank of Paete Inc.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="WhatWeOffer.css">
+  <link rel="stylesheet" href="ruraldesign.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <script src="rating.js"></script>
+</head>
+<body>
+  <!-- Header: single blue bar. Put your logo image in assets/header-logo.png -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="Index.html" class="header-brand">
+        <img src="logo.png" alt="Rural Bank of Paete" class="header-logo">
+        <span class="header-name">
+          <span class="header-name-line1">Rural Bank of</span>
+          <span class="header-name-line2">Paete Inc.</span>
+        </span>
+      </a>
+      <div class="header-search-wrap">
+        <input type="search" placeholder="Search..." class="header-search-input" aria-label="Search">
+        <button type="button" class="header-search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </div>
+      <nav class="header-nav">
+        <a href="#about">About Us</a>
+        <a href="#contact-us">Contact Us</a>
+        <a href="#login" class="header-btn-login">Log In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Secondary nav (optional) -->
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+      <ul class="nav-links">
+        <li><a href="#what-we-offer">What We Offer</a></li>
+        <li><a href="#loans">Loan Services</a></li>
+        <li><a href="#news-updates">News & Updates</a></li>
+        <li><a href="#mobile-banking">Mobile Banking</a></li>
+        <li><a href="#security-trust">Security & Trust</a></li>
+        <li><a href="#why-us">Why Choose Us?</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero: content + illustration, blue bg with subtle grid -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>Welcome to<br>Rural Bank of Paete Inc.</h1>
+        <p class="hero-desc">Serving our community with trust, care, and financial empowerment since 1966. We offer secure and accessible banking services tailored to the needs of individuals, families, farmers, and small businesses in Paete and beyond.</p>
+        <p class="slogan">SOW, SAVE, GROW WITH US!</p>
+        <ul class="hero-features">
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            Safe & Secure Banking
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            Trusted by Generations
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">✓</span>
+            Locally Grown, Digitally Ready
+          </li>
+        </ul>
+        <a href="#open-account" class="btn-cta">Open an Account Now!</a>
+      </div>
+      <div class="hero-illustration">
+        <img src="vector art section 1.png" alt="Banking illustration" class="hero-illus-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Account types carousel -->
+  <section class="accounts" id="offer">
+    <div class="accounts-inner">
+      <button type="button" class="carousel-btn carousel-prev" aria-label="Previous cards">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="cards-track">
+        <article class="account-card">
+          <div class="card-icon">
+            <img src="icon1.png" alt="Regular Savings Icon" class="card-icon-img">
+          </div>
+          <h3>Regular Savings</h3>
+          <p>A deposit account that earns interest and allows you to save for your goals with ease and security.</p>
+          <a href="#regular-savings" class="btn-learn">Learn more...</a>
+        </article>
+        <article class="account-card">
+          <div class="card-icon">
+            <img src="icon2.png" alt="Basic Deposit Icon" class="card-icon-img">
+          </div>
+          <h3>Basic Deposit Account</h3>
+          <p>A simplified savings account designed for the unbanked and those who want straightforward banking.</p>
+          <a href="#basic-deposit" class="btn-learn">Learn more...</a>
+        </article>
+        <article class="account-card">
+          <div class="card-icon">
+            <img src="icon3.png" alt="Time Deposit Icon" class="card-icon-img">
+          </div>
+          <h3>Time Deposit Account</h3>
+          <p>A deposit account where funds are locked in for a set term to earn higher interest rates.</p>
+          <a href="#time-deposit" class="btn-learn">Learn more...</a>
+        </article>
+        <article class="account-card">
+          <div class="card-icon">
+            <img src="icon4.png" alt="Checking Account Icon" class="card-icon-img">
+          </div>
+          <h3>Checking Account</h3>
+          <p>A deposit account that allows the account holder to issue checks for payments and transactions.</p>
+          <a href="#checking" class="btn-learn">Learn more...</a>
+        </article>
+      </div>
+      <button type="button" class="carousel-btn carousel-next" aria-label="Next cards">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- What We Offer section -->
+  <section class="hero offer-page-hero" id="what-we-offer">
+    <div class="hero-bg"></div>
+    <div class="hero-inner offer-inner">
+      <div class="hero-content offer-content">
+        <h1>What We Offer?</h1>
+        <p class="hero-desc">Discover our range of financial services designed to help you save, grow, and manage your money with trust and convenience.</p>
+        <div class="products-label">Products we offer:</div>
+        <div class="inner-box">
+          <div class="box-section-title">Loans</div>
+          <div class="two-cols">
+            <ul>
+              <li>Agricultural Loan</li>
+              <li>Industrial Loan</li>
+              <li>Commercial Loan</li>
+              <li>Medical Loan</li>
+              <li>Housing Loan</li>
+            </ul>
+            <ul>
+              <li>Salary Loan</li>
+              <li>O.F.W. Loan</li>
+              <li>Pension Loan / SSS / GSIS</li>
+              <li>Other Government Supervised Loan</li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <div class="box-section-title">Deposit</div>
+          <ul class="deposit-list">
+            <li>Savings Account Deposit</li>
+            <li>Time Deposit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <img src="vector art 2 section 2.png" alt="What We Offer Illustration" class="hero-illus-img offer-vector-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-bottom">
+    <div class="offer-bottom-inner">
+      <div class="offer-block">
+        <h4>Members</h4>
+        <ul>
+          <li>Philippine Deposit Insurance Corporation</li>
+          <li>Rural Bankers Association of the Philippines</li>
+          <li>Confederation of Southern Tagalog Rural Bank</li>
+        </ul>
+      </div>
+      <div class="offer-block">
+        <h4>Services We Offer</h4>
+        <ul>
+          <li>Bancnet - POS (Point of Sale) - Cash Out</li>
+        </ul>
+      </div>
+      <div class="offer-block offer-cta">
+        <p>Let us know what<br>you want...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us section -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About Us</h2>
+
+      <div class="about-top">
+        <div class="about-image-slot">
+          <img src="about us vector.png" alt="About us illustration" class="about-main-img">
+        </div>
+        <div class="about-info-cards">
+          <article class="about-card">
+            <h3>Who we are?</h3>
+            <p>Rural Bank of Paete Inc. is a community-based bank dedicated to delivering reliable, affordable, and accessible financial services to individuals, families, farmers, and small businesses.</p>
+          </article>
+          <article class="about-card about-card-dark">
+            <h3>Our Story</h3>
+            <p>Founded in 1966, our bank has been a steady partner in financial growth, helping generations of clients manage their savings, invest for the future, and sustain local enterprises.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="about-bottom">
+        <article class="about-wide-card">
+          <h3>Our Mission and Vision Statement</h3>
+          <p>Our mission and vision guide our purpose and direction as we provide banking services with integrity, staying true to our values and long-term goals for the community.</p>
+        </article>
+        <div class="about-pillar-cards">
+          <article class="about-pill-card">
+            <div class="pill-icon"><img src="mission.png" alt="Mission icon"></div>
+            <h3>Mission</h3>
+            <p>To promote financial inclusion by providing safe, accessible, and sustainable banking solutions to our community.</p>
+          </article>
+          <article class="about-pill-card">
+            <div class="pill-icon"><img src="vision.png" alt="Vision icon"></div>
+            <h3>Vision</h3>
+            <p>To be the most trusted and responsive rural bank in Laguna and neighboring provinces.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team image -->
+  <div class="about-section" style="padding-top:0; border-top:none;">
+    <div class="team-full-width">
+      <img src="team.png" alt="Our team" class="team-full-img">
+    </div>
+  </div>
+
+  <!-- Loan Services section -->
+  <section class="loan-section" id="loans">
+    <div class="section-inner">
+      <h2 class="section-title">Loan Services</h2>
+      <div class="loan-grid">
+        <div class="loan-image-slot">
+          <img src="loan.png" alt="Loan services illustration" class="loan-main-img">
+        </div>
+        <div class="loan-divider"></div>
+        <div class="loan-content">
+          <h3>Whether you're growing your farm, starting a business, or facing an emergency, we have a loan for you.</h3>
+          <ul class="loan-list">
+            <li>Competitive interest rates</li>
+            <li>Fast approval process</li>
+            <li>Friendly, local service</li>
+            <li>Flexible payment terms</li>
+          </ul>
+          <div class="loan-cta-row">
+            <a href="#what-we-offer" class="btn-secondary">Check loan requirements</a>
+            <a href="#contact-us" class="btn-cta small">Apply for loan now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWS ================= -->
+  <section class="news-section" id="news-updates">
+    <div class="news-header-tab">News & Updates</div>
+    <div class="news-container">
+      <div class="news-card">
+        <div class="date-badge">August 5, 2025</div>
+        <div class="card-image-area">
+          <img src="news1.png" alt="Mobile Banking App">
+        </div>
+        <div class="card-footer">
+          <p>New Mobile Banking App Launched!</p>
+        </div>
+        <div class="card-spacer">
+          <button class="btn-details">View Details</button>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="date-badge">July 20, 2025</div>
+        <div class="card-image-area">
+          <img src="news2.png" alt="Interest Rates">
+        </div>
+        <div class="card-footer">
+          <p>Higher Interest Rates on Time Deposits</p>
+        </div>
+        <div class="card-spacer">
+          <button class="btn-details">View Details</button>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="date-badge">July 1, 2025</div>
+        <div class="card-image-area">
+          <img src="news3.png" alt="Renovation">
+        </div>
+        <div class="card-footer">
+          <p>Branch Renovation Completed</p>
+        </div>
+        <div class="card-spacer">
+          <button class="btn-details">View Details</button>
+        </div>
+      </div>
+    </div>
+    <button class="btn-view-all">View all</button>
+  </section>
+
+  <!-- ================= MOBILE ================= -->
+  <section class="mobile" id="mobile-banking">
+    <div class="mobile-container">
+      <div class="header-wrapper">
+        <div class="pill-badge">Mobile Banking</div>
+      </div>
+      <div class="content-row">
+        <div class="mobile-img">
+          <img src="mobile.png" alt="App Preview">
+        </div>
+        <div class="mobile-content">
+          <h1>Your bank in <br> your hands.</h1>
+          <p>Manage your savings, transfer funds, and apply for loans, anytime, anywhere.</p>
+          <button class="btn-coming-soon">Coming Soon!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECURITY ================= -->
+  <section class="security-section" id="security-trust">
+    <div class="security-divider">
+      <div class="security-badge">
+        <img src="security icon.png" alt="Security" class="badge-icon">
+        <span class="badge-text">Security & Trust</span>
+      </div>
+    </div>
+    <div class="security-main-content">
+      <div class="compliance-column">
+        <h2 class="compliance-header">We follow strict compliance with:</h2>
+        <ul class="compliance-list">
+          <li>
+            <img src="check.jpg" alt="check" class="check-icon">
+            BSP Regulations
+          </li>
+          <li>
+            <img src="check.jpg" alt="check" class="check-icon">
+            AMLA &amp; KYC Guidelines
+          </li>
+          <li>
+            <img src="check.jpg" alt="check" class="check-icon">
+            Data Privacy Act of 2012
+          </li>
+        </ul>
+        <a href="#" class="btn-learn-more">Learn more...</a>
+      </div>
+      <div class="illustration-column">
+        <img src="security vector.png" alt="Security Illustration" class="main-illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE ================= -->
+  <section class="why" id="why-us">
+    <div class="section-badge white">Why Choose Us?</div>
+    <div class="why-cards">
+      <div class="why-card">
+        <img src="local.png" alt="Icon">
+        <p>Local bank <br> with a heart</p>
+      </div>
+      <div class="why-card">
+        <img src="fast.png" alt="Icon">
+        <p>Fast and <br> friendly service</p>
+      </div>
+      <div class="why-card">
+        <img src="finance.png" alt="Icon">
+        <p>Financial partner for <br> every stage of life</p>
+      </div>
+      <div class="why-card">
+        <img src="empower.png" alt="Icon">
+        <p>Empowering our <br> community for generations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="testimonials">
+    <div class="section-badge">Testimonials</div>
+    <div class="testimonial-wrapper">
+      <div class="testimonial-card">
+        <div class="avatar">
+          <img src="jonathan.png" alt="Jonathan">
+        </div>
+        <div class="card-content">
+          <h3>Jonathan Dela Cruz</h3>
+          <span class="role">OFW</span>
+          <div class="rating-box">
+            <div class="star-rating">
+              <input type="radio" id="c1-s5" name="rating1" value="5" checked><label for="c1-s5">★</label>
+              <input type="radio" id="c1-s4" name="rating1" value="4" checked><label for="c1-s4">★</label>
+              <input type="radio" id="c1-s3" name="rating1" value="3" check><label for="c1-s3">★</label>
+              <input type="radio" id="c1-s2" name="rating1" value="2" checked><label for="c1-s2">★</label>
+              <input type="radio" id="c1-s1" name="rating1" value="1" checked><label for="c1-s1">★</label>
+            </div>
+            <span class="rating-num">1.0</span>
+          </div>
+          <p class="quote-text">
+            Even while I'm working abroad, I can easily manage my savings and send money to my family through their online banking. Truly reliable and convenient.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="avatar">
+          <img src="maria.png" alt="Maria">
+        </div>
+        <div class="card-content">
+          <h3>Maria Santos</h3>
+          <span class="role">Small Business Owner</span>
+          <div class="rating-box">
+            <div class="star-rating">
+              <input type="radio" id="c2-s5" name="rating2" value="5" checked><label for="c2-s5">★</label>
+              <input type="radio" id="c2-s4" name="rating2" value="4" checked><label for="c2-s4">★</label>
+              <input type="radio" id="c2-s3" name="rating2" value="3" check><label for="c2-s3">★</label>
+              <input type="radio" id="c2-s2" name="rating2" value="2" checked><label for="c2-s2">★</label>
+              <input type="radio" id="c2-s1" name="rating2" value="1" checked><label for="c2-s1">★</label>
+            </div>
+            <span class="rating-num">1.0</span>
+          </div>
+          <p class="quote-text">
+            Rural Bank of Paete has been my trusted partner in growing my sari-sari store. Their loan process is fast, and the staff treats me like family.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="avatar">
+          <img src="maria.png" alt="Angela">
+        </div>
+        <div class="card-content">
+          <h3>Angela Reyes</h3>
+          <span class="role">Teacher</span>
+          <div class="rating-box">
+            <div class="star-rating">
+              <input type="radio" id="c3-s5" name="rating3" value="5" checked><label for="c3-s5">★</label>
+              <input type="radio" id="c3-s4" name="rating3" value="4" checked><label for="c3-s4">★</label>
+              <input type="radio" id="c3-s3" name="rating3" value="3" checked><label for="c3-s3">★</label>
+              <input type="radio" id="c3-s2" name="rating3" value="2" checked><label for="c3-s2">★</label>
+              <input type="radio" id="c3-s1" name="rating3" value="1" checked><label for="c3-s1">★</label>
+            </div>
+            <span class="rating-num">1.0</span>
+          </div>
+          <p class="quote-text">
+            I opened my first savings account here, and I've never looked back. They not only help me save but also guide me in reaching my financial goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact-section" id="contact-us">
+    <div class="contact-header-bar">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="contact-content-wrapper">
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+      <div class="contact-info-area">
+        <h2 class="info-title">Get In Touch</h2>
+        <p class="info-subtext">Have questions or need assistance? Our friendly team is ready to help, reach out to us today!</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <img src="contact.png" alt="Phone" class="item-icon">
+            <div class="item-text">
+              <h3>Call Us</h3>
+              <p>(049) 557 0006</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="email.png" alt="Email" class="item-icon">
+            <div class="item-text">
+              <h3>Email Us</h3>
+              <p>rbpaete1967@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="web.png" alt="Web" class="item-icon">
+            <div class="item-text">
+              <h3>Website</h3>
+              <p>www.paetebank.ph</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img src="address.png" alt="Location" class="item-icon">
+            <div class="item-text">
+              <h3>Address</h3>
+              <p>J. Rizal corner J.V. Quesada Streets, Brgy. Ilaya del Sur, Paete, Laguna, 4016</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-box">
+          <h3>Follow Us On</h3>
+          <div class="social-icons">
+            <a href="#"><img src="FB.png" alt="Facebook"></a>
+            <a href="#"><img src="X.png" alt="X"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.2241043040226!2d121.48105394256015!3d14.3644700937698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397fa845478867f%3A0x465c4e154d93b90c!2sRural%20Bank%20of%20Paete!5e0!3m2!1sen!2sph!4v1771907110932!5m2!1sen!2sph"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-column brand-col">
+        <h2 class="footer-logo">Rural Bank of Paete Inc.</h2>
+        <p class="tagline">Maniguro, Magbangko, Umasenso</p>
+        <div class="feedback-section">
+          <h3>Feedback</h3>
+          <form class="feedback-form">
+            <div class="form-left">
+              <input type="text" placeholder="Your Name">
+              <input type="text" placeholder="Occupation">
+            </div>
+            <div class="form-right">
+              <textarea placeholder="Feedback"></textarea>
+              <button type="submit" class="send-btn">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#what-we-offer">What We Offer</a></li>
+          <li><a href="#loans">Loan Services</a></li>
+          <li><a href="#news-updates">News & Updates</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column hide-mobile">
+        <h3>&nbsp;</h3>
+        <ul>
+          <li><a href="#mobile-banking">Mobile Banking</a></li>
+          <li><a href="#security-trust">Security & Trust</a></li>
+          <li><a href="#why-us">Why Choose Us?</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Bancnet - POS (Point of Sale) - Cash Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Rural Bank of Paete Inc. - All Rights Reserved</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rural Bank of Paete</title>
