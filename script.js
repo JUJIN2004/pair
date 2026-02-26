@@ -42,7 +42,7 @@ document.addEventListener('wheel', function (e) {
     clearTimeout(wheelZoomTimeout);
     wheelZoomTimeout = setTimeout(function () {
       resetZoom();
-    }, 10);
+    }, 200);
   }
 }, { passive: true });
 
