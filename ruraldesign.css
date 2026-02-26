@@ -589,6 +589,11 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
+    transition: transform 0.3 ease;
+}
+
+.btn-send:hover{
+    transform: translateY(-8px);
 }
 
 .contact-info-area {
