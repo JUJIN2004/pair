@@ -149,10 +149,11 @@
     margin-top: 40px;
     cursor: pointer;
     font-size: 20px;
+    transition: transform 0.3 ease;
 }
 
 .btn-view-all:hover{
-  transform: translateY(-8px);
+  transform: translateY(-2px);
 }
 
 /* MOBILE */
@@ -589,6 +590,11 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
+    transition: transform 0.3 ease;
+}
+
+.btn-send:hover{
+    transform: translateY(-1px);
 }
 
 .contact-info-area {
