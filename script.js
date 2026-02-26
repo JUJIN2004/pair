@@ -20,20 +20,65 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Prevent zoom in/out
-document.addEventListener('wheel', function (e) {
-  if (e.ctrlKey) e.preventDefault();
-}, { passive: false });
+// Reset zoom to default when zoom gesture is released
+function resetZoom() {
+  document.body.style.zoom = '1';
+  if (window.visualViewport) {
+    // Use meta viewport reset for better cross-browser support
+  }
+  var metaViewport = document.querySelector('meta[name="viewport"]');
+  if (metaViewport) {
+    metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+    setTimeout(function () {
+      metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+    }, 300);
+  }
+}
 
-document.addEventListener('keydown', function (e) {
-  if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
-    e.preventDefault();
+// Mouse wheel zoom: reset on wheel end
+var wheelZoomTimeout;
+document.addEventListener('wheel', function (e) {
+  if (e.ctrlKey) {
+    clearTimeout(wheelZoomTimeout);
+    wheelZoomTimeout = setTimeout(function () {
+      resetZoom();
+    }, 200);
+  }
+}, { passive: true });
+
+// Keyboard zoom: reset on key release
+document.addEventListener('keyup', function (e) {
+  if (e.ctrlKey || ['Control'].includes(e.key)) {
+    // Check if a zoom key was previously pressed
   }
 });
 
-document.addEventListener('touchmove', function (e) {
-  if (e.touches.length > 1) e.preventDefault();
-}, { passive: false });
+var zoomKeyPressed = false;
+document.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
+    zoomKeyPressed = true;
+  }
+});
 
-document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
-document.addEventListener('gesturechange', function (e) { e.preventDefault(); });
+document.addEventListener('keyup', function (e) {
+  if (zoomKeyPressed) {
+    zoomKeyPressed = false;
+    resetZoom();
+  }
+});
+
+// Touch pinch zoom: reset when fingers lift
+document.addEventListener('touchend', function (e) {
+  if (e.touches.length === 0) {
+    // Small delay to let the browser apply the zoom first
+    setTimeout(function () {
+      resetZoom();
+    }, 100);
+  }
+}, { passive: true });
+
+document.addEventListener('gestureend', function (e) {
+  setTimeout(function () {
+    resetZoom();
+  }, 100);
+});
