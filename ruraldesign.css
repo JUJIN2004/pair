@@ -593,7 +593,7 @@
 }
 
 .btn-send:hover{
-    transform: translateY(-8px);
+    transform: translateY(-1px);
 }
 
 .contact-info-area {
