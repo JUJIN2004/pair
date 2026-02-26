@@ -149,6 +149,7 @@
     margin-top: 40px;
     cursor: pointer;
     font-size: 20px;
+    transition: transform 0.3 ease;
 }
 
 .btn-view-all:hover{
