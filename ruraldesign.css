@@ -246,6 +246,11 @@
   border-radius: 100px;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.btn-coming-soon:hover{
+    transform: translateY(-8px);
 }
 
 /* SECURITY */
