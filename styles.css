@@ -179,7 +179,6 @@ html {
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
   justify-content: center;
-  background-color: #2d8a4e;
 }
 
 .nav-links a {
