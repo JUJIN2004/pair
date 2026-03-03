@@ -349,6 +349,19 @@ html {
   }
 }
 
+/* Mobile layout: hide old second nav, always show sticky burger bar */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .scroll-nav {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 /* ----- Hero: solid blue + subtle grid, centered content ----- */
 .hero {
   position: relative;
