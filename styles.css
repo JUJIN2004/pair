@@ -344,18 +344,10 @@ html {
   }
 }
 
-/* Mobile layout: simple logo + burger bar at top */
+/* Mobile layout: revert header/nav, disable sticky scroll-nav */
 @media (max-width: 768px) {
-  .header-search-wrap,
-  .header-nav,
-  .main-nav {
-    display: none;
-  }
-
   .scroll-nav {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+    display: none;
   }
 }
 
