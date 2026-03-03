@@ -34,17 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleScroll() {
     var y = window.scrollY || window.pageYOffset;
 
-    var mobile = window.innerWidth <= 768;
-
-    // On mobile, always keep the sticky nav visible
-    if (mobile) {
-      scrollNav.classList.add('scroll-nav--visible');
-      return;
-    }
-
-    // Desktop/tablet: show once we've scrolled past the main nav
-    var desktopThreshold = mainNav.offsetTop + mainNav.offsetHeight;
-    var shouldShow = y >= desktopThreshold;
+    // Show once we've scrolled past the bottom of the main nav (all devices)
+    var threshold = mainNav.offsetTop + mainNav.offsetHeight;
+    var shouldShow = y >= threshold;
 
     scrollNav.classList.toggle('scroll-nav--visible', shouldShow);
 
