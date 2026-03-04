@@ -353,11 +353,11 @@ html {
 }
 
 /* Mobile layout: revert header/nav, disable sticky scroll-nav */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .scroll-nav {
     display: none;
   }
-}
+} */
 
 /* ----- Hero: solid blue + subtle grid, centered content ----- */
 .hero {
