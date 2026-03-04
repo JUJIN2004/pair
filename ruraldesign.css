@@ -256,30 +256,30 @@
 /* SECURITY */
 /* --- Security Section Base --- */
 .security-section {
-    padding: 40px 0; /* Reduced from 60px for mobile */
+    padding: 40px 0;
     font-family: 'Arial', sans-serif; 
     margin: 0 auto;
     position: relative;
-    overflow: hidden; /* Safety lock against horizontal scroll */
+    overflow: hidden; 
 }
 
-/* --- The Divider Fix --- */
+/* --- The Divider (Full Width) --- */
 .security-divider {
     display: flex;
     align-items: center;
-    width: 100%; /* Changed from 100vw to prevent side scroll */
-    margin-bottom: 40px; /* Reduced from 100px */
-    margin-top: 0;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .security-divider::before,
 .security-divider::after {
     content: "";
     flex: 1;
-    height: 10px; /* Thinner on mobile */
+    height: 20px;
     background-color: #0d3f78;
 }
 
+/* --- Badge Header --- */
 .security-badge {
     display: flex;
     align-items: center;
@@ -288,66 +288,66 @@
 }
 
 .badge-icon {
-    width: 35px; /* Smaller for mobile */
+    width: 30px;
     height: auto;
 }
 
 .badge-text {
     color: #0d3f78;
-    font-size: clamp(18px, 5vw, 36px); /* Fluid typography */
+    font-size: clamp(18px, 6vw, 32px); 
     font-weight: 900;
-    white-space: nowrap;
 }
 
-/* --- Content Layout Fix --- */
+/* --- Main Content (The Fix) --- */
 .security-main-content {
     display: flex;
-    flex-direction: column; /* Stack vertically on mobile */
-    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;    
+    text-align: center;      
     gap: 30px;
     padding: 0 20px;
 }
 
 .compliance-column {
     width: 100%;
-    text-align: center; /* Center text for easier mobile reading */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }
 
 .compliance-header {
     color: #0d3f78;
-    font-size: 20px;
-    font-weight: 800;
-    margin: 0 0 20px 0; /* REMOVED margin-left: 80px */
-    white-space: normal; /* Allow wrapping on small screens */
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 150px;    
+    line-height: 1.2;
 }
 
 .compliance-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 30px 0; /* REMOVED margin-left: 120px */
-    display: inline-block; /* Keeps list centered but left-aligned internally */
-    text-align: left;
+    margin-left: 180px;
 }
 
 .compliance-list li {
     display: flex;
     align-items: center;
     color: #0d3f78;
-    font-size: 18px; /* Reduced from 24px */
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 12px;
 }
 
 .check-icon {
-    width: 30px; /* Smaller for mobile */
-    height: 30px;
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .btn-learn-more {
-    display: block; /* Full width button is easier to tap */
-    width: fit-content;
-    margin: 0 auto; /* REMOVED margin-left: 180px */
+    display: inline-block;
     background-color: #0d3f78;
     color: white;
     padding: 12px 35px;
@@ -356,39 +356,38 @@
     font-size: 16px;
     font-weight: 700;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin: 0 auto;       
 }
 
-/* --- Illustration Fix --- */
+/* --- Illustration Column --- */
 .illustration-column {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .main-illustration {
-    width: 100%; /* Scaling image */
-    max-width: 450px; /* Prevents it from getting too big on desktop */
+    width: 100%;           
+    max-width: 400px;      
     height: auto;
-    margin-right: 0; /* REMOVED fixed margin */
+    margin-right: 70px;    
 }
 
-/* --- Desktop Layout (Reverting for Large Screens) --- */
+/* --- Tablet/Desktop View --- */
 @media (min-width: 992px) {
     .security-main-content {
-        flex-direction: row;
+        flex-direction: row; 
         text-align: left;
     }
-    
     .compliance-column {
-        text-align: left;
+        align-items: flex-start;
     }
-    
-    .btn-learn-more {
-        margin: 0;
+    .compliance-header {
+        font-size: 25px;
     }
-    
     .main-illustration {
-        width: 700px;
+        max-width: 700px;
     }
 }
 
