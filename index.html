@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rural Bank of Paete Inc.</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="stylesheet" href="WhatWeOffer.css">
   <link rel="stylesheet" href="ruraldesign.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,8 @@
   <script src="rating.js"></script>
 </head>
 <body>
-  <!-- Header: single blue bar. Put your logo image in assets/header-logo.png -->
+
+  <!-- Main header (always visible at top) -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="header-brand">
@@ -37,7 +38,7 @@
     </div>
   </header>
 
-  <!-- Secondary nav (optional) -->
+  <!-- Secondary nav links bar -->
   <nav class="main-nav">
     <div class="main-nav-inner">
       <ul class="nav-links">
@@ -51,7 +52,36 @@
     </div>
   </nav>
 
-  <!-- Hero: content + illustration, blue bg with subtle grid -->
+  <!-- Sticky nav: hidden at top, appears after scrolling past header -->
+  <nav class="scroll-nav" aria-label="Sticky navigation">
+    <div class="scroll-nav-inner">
+      <a href="#hero" class="scroll-nav-brand">
+        <img src="logo.png" alt="Rural Bank of Paete" class="scroll-nav-logo">
+        <span class="scroll-nav-name">
+          <span class="scroll-nav-name-line1">Rural Bank of</span>
+          <span class="scroll-nav-name-line2">Paete Inc.</span>
+        </span>
+      </a>
+      <button class="scroll-nav-burger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="scroll-nav-burger-line"></span>
+        <span class="scroll-nav-burger-line"></span>
+        <span class="scroll-nav-burger-line"></span>
+      </button>
+    </div>
+    <ul class="scroll-nav-menu">
+      <li class="scroll-nav-close-wrap">
+        <button class="scroll-nav-close" type="button" aria-label="Close menu">×</button>
+      </li>
+      <li><a href="#what-we-offer">What We Offer</a></li>
+      <li><a href="#loans">Loan Services</a></li>
+      <li><a href="#news-updates">News & Updates</a></li>
+      <li><a href="#mobile-banking">Mobile Banking</a></li>
+      <li><a href="#security-trust">Security & Trust</a></li>
+      <li><a href="#why-us">Why Choose Us?</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
     <div class="hero-inner">
@@ -60,18 +90,9 @@
         <p class="hero-desc">Serving our community with trust, care, and financial empowerment since 1966. We offer secure and accessible banking services tailored to the needs of individuals, families, farmers, and small businesses in Paete and beyond.</p>
         <p class="slogan">SOW, SAVE, GROW WITH US!</p>
         <ul class="hero-features">
-          <li>
-            <span class="check" aria-hidden="true">✓</span>
-            Safe & Secure Banking
-          </li>
-          <li>
-            <span class="check" aria-hidden="true">✓</span>
-            Trusted by Generations
-          </li>
-          <li>
-            <span class="check" aria-hidden="true">✓</span>
-            Locally Grown, Digitally Ready
-          </li>
+          <li><span class="check" aria-hidden="true">✓</span> Safe & Secure Banking</li>
+          <li><span class="check" aria-hidden="true">✓</span> Trusted by Generations</li>
+          <li><span class="check" aria-hidden="true">✓</span> Locally Grown, Digitally Ready</li>
         </ul>
         <a href="#open-account" class="btn-cta">Open an Account Now!</a>
       </div>
@@ -127,7 +148,7 @@
     </div>
   </section>
 
-  <!-- What We Offer section -->
+  <!-- What We Offer -->
   <section class="hero offer-page-hero" id="what-we-offer">
     <div class="hero-bg"></div>
     <div class="hero-inner offer-inner">
@@ -188,11 +209,10 @@
     </div>
   </section>
 
-  <!-- About Us section -->
+  <!-- About Us -->
   <section class="about-section" id="about">
     <div class="section-inner">
       <h2 class="section-title">About Us</h2>
-
       <div class="about-top">
         <div class="about-image-slot">
           <img src="about us vector.png" alt="About us illustration" class="about-main-img">
@@ -200,15 +220,14 @@
         <div class="about-info-cards">
           <article class="about-card">
             <h3>Who we are?</h3>
-            <p>Rural Bank of Paete Inc. is a proud community-based bank committed to delivering reliable, affordable, and inclusive financial services to individuals, farmers: fisherfolk, and micro-entrepreneurs in Laguna and neighboring areas..</p>
+            <p>Rural Bank of Paete Inc. is a proud community-based bank committed to delivering reliable, affordable, and inclusive financial services to individuals, farmers, fisherfolk, and micro-entrepreneurs in Laguna and neighboring areas.</p>
           </article>
           <article class="about-card about-card-dark">
             <h3>Our Story</h3>
-            <p>Founded in 1966 our bank has been a pillar of strength for the local economy We are passionate about empowering our clients, whether it's helping you start your savings journey or funding your farm or small business.</p>
+            <p>Founded in 1966 our bank has been a pillar of strength for the local economy. We are passionate about empowering our clients, whether it's helping you start your savings journey or funding your farm or small business.</p>
           </article>
         </div>
       </div>
-
       <div class="about-bottom">
         <article class="about-wide-card">
           <h3>Our Mission and Vision Statement</h3>
@@ -237,7 +256,7 @@
     </div>
   </div>
 
-  <!-- Loan Services section -->
+  <!-- Loan Services -->
   <section class="loan-section" id="loans">
     <div class="section-inner">
       <h2 class="section-title">Loan Services</h2>
@@ -263,7 +282,7 @@
     </div>
   </section>
 
-  <!-- ================= NEWS ================= -->
+  <!-- News & Updates -->
   <section class="news-section" id="news-updates">
     <div class="news-header-tab">News & Updates</div>
     <div class="news-container">
@@ -279,7 +298,6 @@
           <button class="btn-details">View Details</button>
         </div>
       </div>
-
       <div class="news-card">
         <div class="date-badge">July 20, 2025</div>
         <div class="card-image-area">
@@ -292,7 +310,6 @@
           <button class="btn-details">View Details</button>
         </div>
       </div>
-
       <div class="news-card">
         <div class="date-badge">July 1, 2025</div>
         <div class="card-image-area">
@@ -309,7 +326,7 @@
     <button class="btn-view-all">View all</button>
   </section>
 
-  <!-- ================= MOBILE ================= -->
+  <!-- Mobile Banking -->
   <section class="mobile" id="mobile-banking">
     <div class="mobile-container">
       <div class="header-wrapper">
@@ -328,7 +345,7 @@
     </div>
   </section>
 
-  <!-- ================= SECURITY ================= -->
+  <!-- Security & Trust -->
   <section class="security-section" id="security-trust">
     <div class="security-divider">
       <div class="security-badge">
@@ -361,7 +378,7 @@
     </div>
   </section>
 
-  <!-- ================= WHY CHOOSE ================= -->
+  <!-- Why Choose Us -->
   <section class="why" id="why-us">
     <div class="section-badge white">Why Choose Us?</div>
     <div class="why-cards">
@@ -384,7 +401,7 @@
     </div>
   </section>
 
-  <!-- ================= TESTIMONIALS ================= -->
+  <!-- Testimonials -->
   <section class="testimonials">
     <div class="section-badge">Testimonials</div>
     <div class="testimonial-wrapper">
@@ -398,19 +415,16 @@
           <div class="rating-box">
             <div class="star-rating">
               <input type="radio" id="c1-s5" name="rating1" value="5" checked><label for="c1-s5">★</label>
-              <input type="radio" id="c1-s4" name="rating1" value="4" checked><label for="c1-s4">★</label>
-              <input type="radio" id="c1-s3" name="rating1" value="3" check><label for="c1-s3">★</label>
-              <input type="radio" id="c1-s2" name="rating1" value="2" checked><label for="c1-s2">★</label>
-              <input type="radio" id="c1-s1" name="rating1" value="1" checked><label for="c1-s1">★</label>
+              <input type="radio" id="c1-s4" name="rating1" value="4"><label for="c1-s4">★</label>
+              <input type="radio" id="c1-s3" name="rating1" value="3"><label for="c1-s3">★</label>
+              <input type="radio" id="c1-s2" name="rating1" value="2"><label for="c1-s2">★</label>
+              <input type="radio" id="c1-s1" name="rating1" value="1"><label for="c1-s1">★</label>
             </div>
-            <span class="rating-num">1.0</span>
+            <span class="rating-num">5.0</span>
           </div>
-          <p class="quote-text">
-            Even while I'm working abroad, I can easily manage my savings and send money to my family through their online banking. Truly reliable and convenient.
-          </p>
+          <p class="quote-text">Even while I'm working abroad, I can easily manage my savings and send money to my family through their online banking. Truly reliable and convenient.</p>
         </div>
       </div>
-
       <div class="testimonial-card">
         <div class="avatar">
           <img src="maria.png" alt="Maria">
@@ -421,19 +435,16 @@
           <div class="rating-box">
             <div class="star-rating">
               <input type="radio" id="c2-s5" name="rating2" value="5" checked><label for="c2-s5">★</label>
-              <input type="radio" id="c2-s4" name="rating2" value="4" checked><label for="c2-s4">★</label>
-              <input type="radio" id="c2-s3" name="rating2" value="3" check><label for="c2-s3">★</label>
-              <input type="radio" id="c2-s2" name="rating2" value="2" checked><label for="c2-s2">★</label>
-              <input type="radio" id="c2-s1" name="rating2" value="1" checked><label for="c2-s1">★</label>
+              <input type="radio" id="c2-s4" name="rating2" value="4"><label for="c2-s4">★</label>
+              <input type="radio" id="c2-s3" name="rating2" value="3"><label for="c2-s3">★</label>
+              <input type="radio" id="c2-s2" name="rating2" value="2"><label for="c2-s2">★</label>
+              <input type="radio" id="c2-s1" name="rating2" value="1"><label for="c2-s1">★</label>
             </div>
-            <span class="rating-num">1.0</span>
+            <span class="rating-num">5.0</span>
           </div>
-          <p class="quote-text">
-            Rural Bank of Paete has been my trusted partner in growing my sari-sari store. Their loan process is fast, and the staff treats me like family.
-          </p>
+          <p class="quote-text">Rural Bank of Paete has been my trusted partner in growing my sari-sari store. Their loan process is fast, and the staff treats me like family.</p>
         </div>
       </div>
-
       <div class="testimonial-card">
         <div class="avatar">
           <img src="maria.png" alt="Angela">
@@ -444,22 +455,20 @@
           <div class="rating-box">
             <div class="star-rating">
               <input type="radio" id="c3-s5" name="rating3" value="5" checked><label for="c3-s5">★</label>
-              <input type="radio" id="c3-s4" name="rating3" value="4" checked><label for="c3-s4">★</label>
-              <input type="radio" id="c3-s3" name="rating3" value="3" checked><label for="c3-s3">★</label>
-              <input type="radio" id="c3-s2" name="rating3" value="2" checked><label for="c3-s2">★</label>
-              <input type="radio" id="c3-s1" name="rating3" value="1" checked><label for="c3-s1">★</label>
+              <input type="radio" id="c3-s4" name="rating3" value="4"><label for="c3-s4">★</label>
+              <input type="radio" id="c3-s3" name="rating3" value="3"><label for="c3-s3">★</label>
+              <input type="radio" id="c3-s2" name="rating3" value="2"><label for="c3-s2">★</label>
+              <input type="radio" id="c3-s1" name="rating3" value="1"><label for="c3-s1">★</label>
             </div>
-            <span class="rating-num">1.0</span>
+            <span class="rating-num">5.0</span>
           </div>
-          <p class="quote-text">
-            I opened my first savings account here, and I've never looked back. They not only help me save but also guide me in reaching my financial goals.
-          </p>
+          <p class="quote-text">I opened my first savings account here, and I've never looked back. They not only help me save but also guide me in reaching my financial goals.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- Contact Us -->
   <section class="contact-section" id="contact-us">
     <div class="contact-header-bar">
       <h1>Contact Us</h1>
@@ -487,7 +496,7 @@
             <img src="email.png" alt="Email" class="item-icon">
             <div class="item-text">
               <h3>Email Us</h3>
-              <p>rbpaeta1967@gmail.com</p>
+              <p>ruralbankopaete@gmail.com</p>
             </div>
           </div>
           <div class="contact-item">
@@ -516,6 +525,7 @@
     </div>
   </section>
 
+  <!-- Map -->
   <section class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.2241043040226!2d121.48105394256015!3d14.3644700937698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397fa845478867f%3A0x465c4e154d93b90c!2sRural%20Bank%20of%20Paete!5e0!3m2!1sen!2sph!4v1771907110932!5m2!1sen!2sph"
             width="600"
@@ -527,6 +537,7 @@
     </iframe>
   </section>
 
+  <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-column brand-col">
@@ -546,7 +557,6 @@
           </form>
         </div>
       </div>
-
       <div class="footer-column">
         <h3>Navigation</h3>
         <ul>
@@ -555,7 +565,6 @@
           <li><a href="#contact-us">Contact Us</a></li>
         </ul>
       </div>
-
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
@@ -564,7 +573,6 @@
           <li><a href="#news-updates">News & Updates</a></li>
         </ul>
       </div>
-
       <div class="footer-column hide-mobile">
         <h3>&nbsp;</h3>
         <ul>
@@ -573,7 +581,6 @@
           <li><a href="#why-us">Why Choose Us?</a></li>
         </ul>
       </div>
-
       <div class="footer-column">
         <h3>Services</h3>
         <ul>
@@ -587,6 +594,8 @@
     <p>&copy; 2025 Rural Bank of Paete Inc. - All Rights Reserved</p>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <div class="scroll-nav-overlay" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
