@@ -254,125 +254,142 @@
 }
 
 /* SECURITY */
+/* --- Security Section Base --- */
 .security-section {
-    padding: 60px 0;
+    padding: 40px 0; /* Reduced from 60px for mobile */
     font-family: 'Arial', sans-serif; 
     margin: 0 auto;
     position: relative;
+    overflow: hidden; /* Safety lock against horizontal scroll */
 }
 
+/* --- The Divider Fix --- */
 .security-divider {
-   display: flex;
-   align-items: center;
-   width: 100vw;
-   position: relative;
-   left: 50%;
-   right: 50%;
-   margin-left: -50vw;
-   margin-right: -50vw;
-   margin-bottom: 100px;
-   margin-top: -20px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Changed from 100vw to prevent side scroll */
+    margin-bottom: 40px; /* Reduced from 100px */
+    margin-top: 0;
 }
 
 .security-divider::before,
 .security-divider::after {
     content: "";
     flex: 1;
-    height: 20px; 
+    height: 10px; /* Thinner on mobile */
     background-color: #0d3f78;
 }
 
 .security-badge {
     display: flex;
     align-items: center;
-    padding: 0 30px;
-    gap: 15px;
+    padding: 0 15px;
+    gap: 10px;
 }
 
 .badge-icon {
-    width: 50px;
+    width: 35px; /* Smaller for mobile */
     height: auto;
 }
 
 .badge-text {
     color: #0d3f78;
-    font-size: 36px;
+    font-size: clamp(18px, 5vw, 36px); /* Fluid typography */
     font-weight: 900;
     white-space: nowrap;
 }
 
+/* --- Content Layout Fix --- */
 .security-main-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack vertically on mobile */
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     padding: 0 20px;
 }
 
 .compliance-column {
-    flex: 1;
+    width: 100%;
+    text-align: center; /* Center text for easier mobile reading */
 }
 
 .compliance-header {
     color: #0d3f78;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 800;
-    margin-bottom: 35px;
-    margin-left: 80px;
-    white-space: nowrap;
+    margin: 0 0 20px 0; /* REMOVED margin-left: 80px */
+    white-space: normal; /* Allow wrapping on small screens */
 }
 
 .compliance-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 40px;
-    margin-left: 120px;
+    margin: 0 0 30px 0; /* REMOVED margin-left: 120px */
+    display: inline-block; /* Keeps list centered but left-aligned internally */
+    text-align: left;
 }
 
 .compliance-list li {
     display: flex;
     align-items: center;
     color: #0d3f78;
-    font-size: 24px;
+    font-size: 18px; /* Reduced from 24px */
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .check-icon {
-    width: 45px;
-    height: 45px;
+    width: 30px; /* Smaller for mobile */
+    height: 30px;
+    margin-right: 10px;
 }
 
 .btn-learn-more {
-    display: inline-block;
+    display: block; /* Full width button is easier to tap */
+    width: fit-content;
+    margin: 0 auto; /* REMOVED margin-left: 180px */
     background-color: #0d3f78;
     color: white;
     padding: 12px 35px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    font-weight: 600;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease;
-    margin-left: 180px;
 }
 
-.btn-learn-more:hover {
-    transform: translateY(-2px);
-    background-color: #124d91;
-}
-
+/* --- Illustration Fix --- */
 .illustration-column {
-    flex: 1.2;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .main-illustration {
-    width: 700px;
+    width: 100%; /* Scaling image */
+    max-width: 450px; /* Prevents it from getting too big on desktop */
     height: auto;
-    margin-right: 70px;
+    margin-right: 0; /* REMOVED fixed margin */
+}
+
+/* --- Desktop Layout (Reverting for Large Screens) --- */
+@media (min-width: 992px) {
+    .security-main-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .compliance-column {
+        text-align: left;
+    }
+    
+    .btn-learn-more {
+        margin: 0;
+    }
+    
+    .main-illustration {
+        width: 700px;
+    }
 }
 
 /* WHY */
